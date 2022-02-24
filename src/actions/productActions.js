@@ -14,7 +14,7 @@ export const listProducts = () => async (dispatch) => {
   });
   try {
     const { data } = await Axios.get(
-      'http://si-amazonia.herokuapp.com/api/products'
+      'https://si-amazonia.herokuapp.com/api/products'
     );
     dispatch({
       type: PRODUCT_LIST_SUCCESS,

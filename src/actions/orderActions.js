@@ -13,7 +13,7 @@ export const createOrder = (order) => async (dispatch, getState) => {
       userSignin: { userInfo },
     } = getState();
     const { data } = await Axios.post(
-      'http://si-amazonia.herokuapp.com/api/orders',
+      'https://si-amazonia.herokuapp.com/api/orders',
       order,
       {
         headers: {

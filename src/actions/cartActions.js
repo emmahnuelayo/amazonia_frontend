@@ -9,7 +9,7 @@ import Axios from 'axios';
 
 export const addToCart = (productId, qty) => async (dispatch, getState) => {
   const { data } = await Axios.get(
-    `http://si-amazonia.herokuapp.com/api/products/${productId}`
+    `https://si-amazonia.herokuapp.com/api/products/${productId}`
   );
   dispatch({
     type: CART_ADD_ITEM,
