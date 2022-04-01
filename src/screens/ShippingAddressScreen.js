@@ -31,7 +31,7 @@ export default function ShippingAddressScreen() {
 
   useEffect(() => {
     if (!userInfo) {
-      navigate(`/signin`);
+      navigate('/signin');
     }
   }, [userInfo]);
 
@@ -98,7 +98,6 @@ export default function ShippingAddressScreen() {
           />
         </div>
         <div>
-          <label />
           <button className='primary' type='submit'>
             Continue
           </button>

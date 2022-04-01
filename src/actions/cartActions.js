@@ -5,12 +5,12 @@ import {
   CART_SAVE_PAYMENT_METHOD,
 } from '../constants/cartConstants.js';
 
+import { config } from '../constants/apiConstants';
 import Axios from 'axios';
 
+const url = config.url.API_URL;
 export const addToCart = (productId, qty) => async (dispatch, getState) => {
-  const { data } = await Axios.get(
-    `https://si-amazonia.herokuapp.com/api/products/${productId}`
-  );
+  const { data } = await Axios.get(`${url}/products/${productId}`);
   dispatch({
     type: CART_ADD_ITEM,
     payload: {
@@ -38,3 +38,4 @@ export const saveShippingAddress = (data) => async (dispatch) => {
 export const savePaymentMethod = (data) => (dispatch) => {
   dispatch({ type: CART_SAVE_PAYMENT_METHOD, payload: data });
 };
+

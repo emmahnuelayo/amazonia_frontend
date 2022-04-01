@@ -6,7 +6,7 @@ import { signin } from '../actions/userActions';
 import MessageBox from '../components/MessageBox';
 import LoadingBox from '../components/LoadingBox';
 
-export default function SigninScreen(props) {
+export default function SigninScreen() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -62,13 +62,11 @@ export default function SigninScreen(props) {
           />
         </div>
         <div>
-          <label />
           <button className='primary' type='submit'>
             Sign In
           </button>
         </div>
         <div>
-          <label />
           <div>
             New customer?{' '}
             <Link to={`/register?redirect=${redirectTwo}`}>Create your account</Link>

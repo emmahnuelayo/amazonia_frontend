@@ -8,8 +8,8 @@ export default function Rating(props) {
             rating >= 1
               ? 'fa fa-star'
               : rating >= 0.5
-              ? 'fa fa-star-ha;f-o'
-              : 'fa fa-star-o'
+                ? 'fa fa-star-ha;f-o'
+                : 'fa fa-star-o'
           }
         ></i>
       </span>
@@ -19,8 +19,8 @@ export default function Rating(props) {
             rating >= 2
               ? 'fa fa-star'
               : rating >= 1.5
-              ? 'fa fa-star-ha;f-o'
-              : 'fa fa-star-o'
+                ? 'fa fa-star-ha;f-o'
+                : 'fa fa-star-o'
           }
         ></i>
       </span>
@@ -30,8 +30,8 @@ export default function Rating(props) {
             rating >= 3
               ? 'fa fa-star'
               : rating >= 2.5
-              ? 'fa fa-star-ha;f-o'
-              : 'fa fa-star-o'
+                ? 'fa fa-star-ha;f-o'
+                : 'fa fa-star-o'
           }
         ></i>
       </span>
@@ -41,8 +41,8 @@ export default function Rating(props) {
             rating >= 4
               ? 'fa fa-star'
               : rating >= 3.5
-              ? 'fa fa-star-ha;f-o'
-              : 'fa fa-star-o'
+                ? 'fa fa-star-ha;f-o'
+                : 'fa fa-star-o'
           }
         ></i>
       </span>
@@ -52,8 +52,8 @@ export default function Rating(props) {
             rating >= 5
               ? 'fa fa-star'
               : rating >= 4.5
-              ? 'fa fa-star-ha;f-o'
-              : 'fa fa-star-o'
+                ? 'fa fa-star-ha;f-o'
+                : 'fa fa-star-o'
           }
         ></i>
       </span>

@@ -23,6 +23,9 @@ yarn-debug.log*
 yarn-error.log*
 
 package-lock.json
+yarn.lock
 /backend
 .env
 .eslintrc.js
+.eslintrc.json
+.prettierrc

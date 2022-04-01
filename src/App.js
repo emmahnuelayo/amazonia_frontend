@@ -10,6 +10,10 @@ import NavBar from './components/NavBar';
 import Footer from './components/Footer';
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import OrderScreen from './screens/OrderScreen';
+import OrderHistoryScreen from './screens/OrderHistoryScreen';
+import ProfileScreen from './screens/ProfileScreen';
+import PrivateRoute from './components/PrivateRoute';
 
 function App() {
   return (
@@ -24,9 +28,12 @@ function App() {
             <Route path='/cart/:id' element={<CartScreen />} />
             <Route path='/signin' element={<SigninScreen />} />
             <Route path='/register' element={<RegisterScreen />} />
-            <Route path='/shipping' element={<ShippingAddressScreen />} />
-            <Route path='/payment' element={<PaymentMethodScreen />} />
-            <Route path='/placeorder' element={<PlaceOrderScreen />} />
+            <Route path='/shipping' element={<PrivateRoute><ShippingAddressScreen /></PrivateRoute>} />
+            <Route path='/payment' element={<PrivateRoute><PaymentMethodScreen /></PrivateRoute>} />
+            <Route path='/placeorder' element={<PrivateRoute><PlaceOrderScreen /></PrivateRoute>} />
+            <Route path='/order/:id' element={<PrivateRoute><OrderScreen/></PrivateRoute>} />
+            <Route path='/orderhistory' element={<PrivateRoute><OrderHistoryScreen/></PrivateRoute>} />
+            <Route path='/profile' element={<PrivateRoute><ProfileScreen/></PrivateRoute>} />
           </Routes>
         </main>
         <Footer />

@@ -1,4 +1,4 @@
-import { useState, useMemo, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useLocation, Link, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 
@@ -6,7 +6,7 @@ import { register } from '../actions/userActions';
 import MessageBox from '../components/MessageBox';
 import LoadingBox from '../components/LoadingBox';
 
-export default function RegisterScreen(props) {
+export default function RegisterScreen() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -17,9 +17,9 @@ export default function RegisterScreen(props) {
   const location = useLocation();
 
   let redirect = location.search ? `/${location.search.split('=')[1]}` : '/';
-    let redirectTwo = location.search
-      ? `${location.search.split('=')[1]}`
-      : '/';
+  let redirectTwo = location.search
+    ? `${location.search.split('=')[1]}`
+    : '/';
 
 
   const userRegister = useSelector((state) => state.userRegister);
@@ -91,13 +91,11 @@ export default function RegisterScreen(props) {
           />
         </div>
         <div>
-          <label />
           <button className='primary' type='submit'>
             Sign Up
           </button>
         </div>
         <div>
-          <label />
           <div>
             Already have an account?{' '}
             <Link to={`/signin?redirect=${redirectTwo}`}>

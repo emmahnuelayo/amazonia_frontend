@@ -12,7 +12,7 @@ import LoadingBox from '../components/LoadingBox';
 import { useSelector, useDispatch } from 'react-redux';
 import { detailsProduct } from '../actions/productActions';
 
-export default function ProductScreen(props) {
+export default function ProductScreen() {
   const [qty, setQty] = useState(1);
   const dispatch = useDispatch();
   const { id } = useParams();

@@ -7,15 +7,18 @@ import {
   PRODUCT_DETAILS_FAIL,
 } from '../constants/productConstants.js';
 import Axios from 'axios';
+import { config } from '../constants/apiConstants'
 
+const url = config.url.API_URL
 export const listProducts = () => async (dispatch) => {
   dispatch({
     type: PRODUCT_LIST_REQUEST,
   });
   try {
     const { data } = await Axios.get(
-      'https://si-amazonia.herokuapp.com/api/products'
+      `${url}/products`
     );
+    // );
     dispatch({
       type: PRODUCT_LIST_SUCCESS,
       payload: data,
@@ -32,7 +35,7 @@ export const detailsProduct = (productId) => async (dispatch) => {
   dispatch({ type: PRODUCT_DETAILS_REQUEST, payload: productId });
   try {
     const { data } = await Axios.get(
-      `https://si-amazonia.herokuapp.com/api/products/${productId}`
+      `${url}/products/${productId}`
     );
     dispatch({ type: PRODUCT_DETAILS_SUCCESS, payload: data });
   } catch (error) {
